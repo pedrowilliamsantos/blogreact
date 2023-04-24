@@ -19,6 +19,7 @@ function Register() {
     e.preventDefault()
     try{
       const res = await axios.post("/auth/register", inputs)
+      console.log(res)
     }catch(err) {
       console.log(err)
     }

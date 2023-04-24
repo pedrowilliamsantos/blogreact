@@ -16,7 +16,7 @@ const Single = () => {
             <span>Pedro</span>
             <p>Posted 2 days ago</p>
           </div>
-          <div className="edit">
+          <div className="edit">0
             <Link to={`/write?edit=2`}>
               <img src={Edit} alt="" />
             </Link>
