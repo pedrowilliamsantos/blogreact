@@ -15,11 +15,11 @@ const Register = () => {
 
   const navigate = useNavigate()
 
-  const handleChange = e =>{
-    setInputs(prev=>({...prev,[e.target.name]: e.target.value}))
+  const handleChange = (e) =>{
+    setInputs((prev)=>({...prev,[e.target.name]: e.target.value}))
   }
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     try{
       await axios.post("/auth/register", inputs)
@@ -33,7 +33,7 @@ const Register = () => {
   return (
   <>
   <div className='auth'>
-    <h1>Login</h1>
+    <h1>Register</h1>
     <form action="">
         <input type="text" placeholder='username' name='username' onChange={handleChange} required/>
         <input type="email" placeholder='email' name='email' onChange={handleChange} required/>

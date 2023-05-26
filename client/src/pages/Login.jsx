@@ -16,11 +16,11 @@ const Login = () => {
 
   const {login} = useContext(AuthContext)
 
-  const handleChange = e =>{
-    setInputs(prev=>({...prev,[e.target.name]: e.target.value}))
+  const handleChange = (e) =>{
+    setInputs((prev)=>({...prev,[e.target.name]: e.target.value}))
   }
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     try{
       await login(inputs)
